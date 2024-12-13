@@ -1,0 +1,24 @@
+@if (!results()) {
+<p class="center">Please enter some values and press "Submit"</p>
+} @else {
+<table>
+  <thead>
+    <tr>
+      <th>Earnings Per Month ($)</th>
+      <th>Monthly Savings ($)</th>
+      <th>Monthly Spendings ($)</th>
+      <th>Total Savings ($)</th>
+      <th>Total Expenses ($)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{ results()?.earnings | currency }}</td>
+      <td>{{ results()?.savings | currency }}</td>
+      <td>{{ results()?.spendings | currency }}</td>
+      <td>{{ results()?.totalSavings | currency }}</td>
+      <td>{{ results()?.totalExpenses | currency }}</td>
+    </tr>
+  </tbody>
+</table>
+}

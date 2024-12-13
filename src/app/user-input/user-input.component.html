@@ -1,0 +1,34 @@
+<form (ngSubmit)="onSubmit()">
+  <div class="input-group">
+    <p>
+      <label for="earnings-per-paycheck">Monthly Pay ($)</label>
+      <input
+        id="earnings-per-paycheck"
+        name="earnings-per-paycheck"
+        type="number"
+        [(ngModel)]="enteredEarningsPerPaycheck"
+      />
+    </p>
+    <p>
+      <label for="percent-to-save">Percent To Save (%)</label>
+      <input
+        id="percent-to-save"
+        name="percent-to-save"
+        type="number"
+        [(ngModel)]="enteredPercentToSave"
+      />
+    </p>
+    <p>
+      <label for="num-years">Months</label>
+      <input
+        id="num-years"
+        name="num-years"
+        type="number"
+        [(ngModel)]="enteredNumberOfYears"
+      />
+    </p>
+  </div>
+  <p>
+    <button>Submit</button>
+  </p>
+</form>
